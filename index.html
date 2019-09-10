@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Giftastic</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
 </head>
+
+<!-- This form will be where users input data about gifs -->
 <body>
     
+        <h1>Travel Search Search</h1>
+
+         <!-- Rendered Buttons will get Dumped Here  -->
+    <div id="buttons-view"></div>
+
+
+ <!-- This form will be where users input data about gifs -->
+<form id="place-form">
+    <label for="place-input">Name a Place</label>
+    <input type="text" id="place-input"><br>
+    <input id="add-place" type="submit" value="Add a Place!">
+</form>
+
+<div id="gifs-appear-here">
+</div>
+
+
+<script src="assets/javascript/app.js"></script>
+
 </body>
 </html>
