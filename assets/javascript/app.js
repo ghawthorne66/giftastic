@@ -1,5 +1,5 @@
 console.log("Javascript file loaded");
-const API_KEY = "F8P9q2z1W22t2GnQ3lUnRmz7BW1ffTig"
+var API_KEY = "F8P9q2z1W22t2GnQ3lUnRmz7BW1ffTig"
 
 console.log("rendering")
 
@@ -43,7 +43,8 @@ $("#add-place").on("click", function(event) {
 
   renderButtons()
   
-  $("button").on("click", function() {
+  $(document).on("click", ".place", function() {   //change to document//
+    event.preventDefault();
     console.log("Button clicked")
     var place = $(this).attr("data-place");
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
@@ -93,7 +94,8 @@ $("#add-place").on("click", function(event) {
   });
 
 
-function attachEventListeners(){
+function attachEventListeners(){  //need to examine
+  
     console.log("Adding event listener")
     $(".gif").on("click", function() {
         var state = $(this).attr("data-state");

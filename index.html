@@ -5,34 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Giftastic</title>
+<!-- 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!---Bootstrap Css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link rel="stylesheet" href="assets/css/style.css">
-
 
 </head>
 
 <!-- This form will be where users input data about gifs -->
 <body>
-    
-        <h1>Travel Search Search</h1>
+    <div class="container">
 
-         <!-- Rendered Buttons will get Dumped Here  -->
-    <div id="buttons-view"></div>
+            <!-- <div class="row">
+                    <div class="col-9"> -->
+                            <h1 class="mb-3">Travel Search</h1>
+                            <!-- Rendered Buttons will get Dumped Here -->
+                       <div class="mb-9" id="buttons-view"></div>
+                    <!-- </div>
+                    </div> -->
 
+
+        <hr>
+
+        <div class="row">
+            <!-- <div class="col-8">.col-4<br>Subsequent columns continue along the new line.</div> -->
+            <form id="place-form">
+                <label for="place-input" class="form-loc" >Name a Place</label>
+                <input type="text" class="form-loc" id="place-input"><br>
+                <input id="add-place" class="form-loc" type="submit" value="submit">
+            </form>
+            
+            <div class="col-4" id="gifs-appear-here"></div>
+                        
+        </div>
+            
+
+<!--button data-sport="football" class="btn-dark">Football</button>-->
 
  <!-- This form will be where users input data about gifs -->
-<form id="place-form">
-    <label for="place-input">Name a Place</label>
-    <input type="text" id="place-input"><br>
-    <input id="add-place" type="submit" value="Add a Place!">
-</form>
 
-<div id="gifs-appear-here">
-</div>
+    </div>
 
+
+<!-- Optional JavaScript -->
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS --> 
+ <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <script src="assets/javascript/app.js"></script>
 
 </body>
 </html>
+
+<!-- <div class="row">
+        <div class="col-9">.col-9</div>
+        <div class="col-4">.col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+        <div class="col-6">.col-6<br>Subsequent columns continue along the new line.</div>
+      </div> -->
+

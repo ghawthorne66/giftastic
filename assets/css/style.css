@@ -1,0 +1,45 @@
+/* #type {
+      margin: 10px;
+    } */
+
+    .mb-3 {
+
+        color: white;
+        float: left;
+    }
+    .mb-9 {
+
+        margin-left: 400px;
+        margin-top: 10px;
+    }
+
+#place-form {
+    float: left;
+    font-weight: 300;
+    font-size: 18px;
+
+
+    }
+
+    /* .gallery-img {
+        max-width: 400px;
+        display: block;
+        margin-bottom: 10px;
+      }  */
+
+     .place {
+
+        padding: 5px;
+        margin-right: 2%;
+      }
+
+
+      .form-loc {
+
+        margin-top: 5px;
+        margin-left: 825px;
+      }
+
+      
+
+
