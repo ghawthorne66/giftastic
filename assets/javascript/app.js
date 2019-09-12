@@ -4,6 +4,7 @@ var API_KEY = "F8P9q2z1W22t2GnQ3lUnRmz7BW1ffTig"
 console.log("rendering")
 
 var places = ["Spain", "Mexico", "Australia", "Tanzania"];
+
 $("#add-place").on("click", function(event) {
     event.preventDefault();
 
@@ -64,7 +65,7 @@ $("#add-place").on("click", function(event) {
             var rating = results[i].rating;
             var still_url = results[i].images.original_still.url; 
             var animated_url = results[i].images.fixed_height.url;
-          var gifDiv = $("<div>");
+            var gifDiv = $("<div>");
           
           ///gifDiv.addClass("gif");
           //gifDiv.attr("data-state", "still");
@@ -82,47 +83,53 @@ $("#add-place").on("click", function(event) {
           placeImage.attr("data-animate", animated_url);
           placeImage.attr("data-still", still_url);
           placeImage.addClass("gif");
-        
+  
           placeImage.attr("src", still_url);
 
           gifDiv.prepend(p);
           gifDiv.prepend(placeImage);
           $("#gifs-appear-here").prepend(gifDiv);
-          attachEventListeners();
+          //attachEventListeners();
+
+
+
+
         }
+
+
+        console.log("Adding event listener")
+        $(".gif").on("click", function() {
+            var state = $(this).attr("data-state");
+            console.log(" ")
+            console.log("--------------------------------")
+            console.log("state: " + state);
+           
+            if (state == "still") {
+                // get the animate url & set the src attribute
+                $(this).attr("src", $(this).attr("data-animate"))
+                // set the state attribute
+                $(this).attr("data-state", "animate")
+                console.log(" ")
+                console.log(" ")
+                console.log("Changing from still to animate new source: " + $(this).attr("src"));
+                console.log("new state: " +$(this).attr("data-state"));
+              } else {
+                // get the still url & set the src attribute
+                $(this).attr("src", $(this).attr("data-still"))
+                // set the state attribute
+                $(this).attr("data-state", "still");
+                console.log(" ")
+                console.log(" ")
+                console.log("Changing from animate to still: " + $(this).attr("src"));
+                console.log("new state: " +$(this).attr("data-state"));
+              }
+          })
+          
       });
   });
 
-
-function attachEventListeners(){  //need to examine
-  
-    console.log("Adding event listener")
-    $(".gif").on("click", function() {
-        var state = $(this).attr("data-state");
-        console.log(" ")
-        console.log("--------------------------------")
-        console.log("state: " + state);
-       
-        if (state == "still") {
-            // get the animate url & set the src attribute
-            $(this).attr("src", $(this).attr("data-animate"))
-            // set the state attribute
-            $(this).attr("data-state", "animate")
-            console.log(" ")
-            console.log(" ")
-            console.log("Changing from still to animate new source: " + $(this).attr("src"));
-            console.log("new state: " +$(this).attr("data-state"));
-          } else {
-            // get the still url & set the src attribute
-            $(this).attr("src", $(this).attr("data-still"))
-            // set the state attribute
-            $(this).attr("data-state", "still");
-            console.log(" ")
-            console.log(" ")
-            console.log("Changing from animate to still: " + $(this).attr("src"));
-            console.log("new state: " +$(this).attr("data-state"));
-          }
-      })
-}
+//function attachEventListeners(){  //need to examine
+    
+//}
 
 
